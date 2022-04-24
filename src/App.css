@@ -1,38 +1,100 @@
+#root {
+    height: 100%;
+    width: 100%;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+}
+/*App Header*/
+.App-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  margin: 10px 0;
+}
+/*Search Bar*/
+.search-images {
+  background-color: #282c34;
+  width: 800px;
+  max-width: 800px;
+  display: flex;
+  margin: 0 auto 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-images input {
+  width: 85%;
+  padding: 15px 10px;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  border-radius: 0.35em 0 0 0.35em ;
+  background-color: #41495b;
+  color: #fff;
 }
+.search-button {
+  width: 10%;
+  background-color: #41495b;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-image: url('./icons/search-solid.svg');
+  outline: 0;
+  border: 0;
+  padding: 15px 10px;
+  cursor: pointer;
+  border-radius: 0 0.35em 0.35em 0;
+
+}
+/*Images*/
+.search-image-results {
+  height: 100vmax;
+}
+.search-image-results .loading-images {
+  color: #fff;
+  font-size: 1.5em;
+}
+.images {
+  column-count: 3;
+  color: #fff;
+}
+img {
+  width: 100%;
+}
+/*Image Full View*/
+.image-full-view {
+  background-color: #282c34;
+  max-width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+.image-full-view .image-container {
+  column-count: 1;
+}
+.close-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.close-image-button {
+  width: 5%;
+  background-color: #282c34;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  background-image: url('./icons/times-solid.svg');
+  outline: 0;
+  border: 0;
+  padding: 10px 5px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
